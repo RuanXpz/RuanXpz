@@ -1,0 +1,17 @@
+package exemplo1;
+public class Exemplo1 {
+    public static void main(String[] args) {
+        
+        int x = 15;
+        int y = 30;
+        double dolar = 3.0;
+        double dOlar = 4.0;
+        boolean test = false;
+        
+        System.out.println(x);
+        System.out.println(y);
+        System.out.println(dolar);
+        System.out.println(dOlar);
+        System.out.println(test);
+    }
+}
