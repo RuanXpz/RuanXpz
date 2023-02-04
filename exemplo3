@@ -1,0 +1,35 @@
+* To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package exemplo3;
+
+/**
+ *
+ * @author aluno
+ */
+public class Exemplo3 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here
+        int x = 10;
+        int y = 3;
+        
+        System.out.println(x + 3); //13
+        System.out.println(x - 3); //7
+        System.out.println(x * y); //30
+        System.out.println(++ x); //11
+        
+        System.out.println("-------->------------>---------->--");
+        
+        System.out.println(x ++); //11
+        System.out.println(y + 2); //5
+        System.out.println(y * 8); //24
+        System.out.println(x - y - 1); //8
+        
+        
+    }
+}
