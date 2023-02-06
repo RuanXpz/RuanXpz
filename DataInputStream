@@ -1,0 +1,44 @@
+* @author aluno
+ */
+public class DataImputStream {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException{
+        // TODO code application logic here
+        String s = "";
+        
+        float nota1;
+        float nota2;
+        float frequencia;
+        
+        DataInputStream dado;
+        
+        System.out.println("Informe nota 1: ");
+        dado = new DataInputStream(System.in);
+        s = dado.readLine();
+        nota1 = Float.parseFloat(s);
+        
+        System.out.println("Informe nota 2: ");
+        dado = new DataInputStream(System.in);
+        s = dado.readLine();
+        nota2 = Float.parseFloat(s);
+        
+        System.out.println("Insira a frequencia: ");
+        dado = new DataInputStream(System.in);
+        s = dado.readLine();
+        frequencia = Float.parseFloat(s);
+        
+        if(nota1 >= 7 && nota2 >= 7 && frequencia >= 75){
+            System.out.println("Aprovado!");
+        }else{
+            System.err.println("Reprovado!");
+        }
+        
+        double media = nota1 + nota2 / 2;
+        System.out.println("Media: " + media);
+        
+    }
+    
+}
