@@ -1,0 +1,32 @@
+import java.io.*;
+class Test {
+    public static void main(String[] args) throws IOException {
+
+        DataInputStream d = new DataInputStream(System.in);
+
+        System.out.println("Insira o valor do produto: ");
+        Double valor = d.readDouble();
+
+        System.out.println("Cidades: ---> [1 = MG] -|- [2 = SP] -|- [3 = RJ] -|- [4 = MS] <---");
+
+        System.out.println("Informe o estado desejado: ");
+        int estDesej = Integer.parseInt(d.readLine());//estado desejado;
+        if (estDesej == 1){
+            float valorMG = (float) ((valor * 7)/100);
+            System.out.println("Estado escolhido foi Minas Gerais");
+            System.out.println("Valor total: " + valor + valorMG);
+        }else if (estDesej == 2){
+            float valorSP = (float) ((valor + 12)/100);
+            System.out.println("Estado escolhido foi Sao Paulo");
+            System.out.println("Valor total: " + valor + valorSP);
+        }else if (estDesej == 3){
+            float valorRJ = (float) (valor * 15)/100;
+            System.out.println("Estado escolhido foi Rio de Janeiro");
+            System.out.println("Valor total: " + valor + valorRJ);
+        } else if (estDesej == 4) {
+            float valorMS = (float) (valor * 8)/100;
+            System.out.println("Estado escolhido foi Mato Grosso do Sul");
+            System.out.println("Valor total: " + valor + valorMS);
+        }
+    }
+}
