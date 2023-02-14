@@ -1,0 +1,43 @@
+package javaapplication22;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author aluno
+ */
+public class JavaApplication22 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+        // TODO code application logic here
+        DataInputStream dado;
+        String s = "";
+        float nota1 = 0;
+        float nota2 = 0;
+        float nota3 = 0;
+        
+       System.out.println("Informe nota 1: ");
+       dado = new DataInputStream(System.in);
+       s = dado.readLine();
+       nota1 = Float.parseFloat(s);
+       
+       System.out.println("Informe nota 2: ");
+       dado = new DataInputStream(System.in);
+       s = dado.readLine();
+       nota2 = Float.parseFloat(s);
+       
+       System.out.println("Informe nota 3: ");
+       dado = new DataInputStream(System.in);
+       s = dado.readLine();
+       nota3 = Float.parseFloat(s);
+       
+       
+       System.out.println("Nota 1: " + nota1);
+       System.out.println("Nota 2: " + nota2);
+       System.out.println("Nota 3: " + nota3);
+    }
+}
