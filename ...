@@ -1,0 +1,21 @@
+package javaapplication21;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+public class JavaApplication21 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+        DataInputStream dado;
+        String s = "";
+        float nota = 0;
+        System.out.println("Informe sua nota: ");
+        dado = new DataInputStream(System.in);
+        s = dado.readLine();
+        nota = Float.parseFloat(s);
+        System.out.print("sua nota: " + nota);
+    }
+}
