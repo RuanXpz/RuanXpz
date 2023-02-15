@@ -1,0 +1,47 @@
+package javaapplication24;
+
+import java.io.DataInputStream;
+import java.io.IOException;
+
+/**
+ *
+ * @author aluno
+ */
+public class JavaApplication24 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) throws IOException {
+
+        DataInputStream dado;
+        dado = new DataInputStream(System.in);
+        
+        String s = "";
+        String nome = "";
+        float idade = 0;
+        float notaTotal = 0;
+        
+        System.out.println("Informe seu nome: ");
+        nome = dado.readLine();
+        
+        System.out.println("Informe sua idade: ");
+        s = dado.readLine();
+        idade = Float.parseFloat(s);
+        
+        System.out.println("Informe sua nota total: ");
+        s = dado.readLine();
+        notaTotal = Float.parseFloat(s);
+        
+        System.out.println("-----------------------------");
+        System.out.println("Nome: " + nome + "\n" + "Idade: " + idade);
+        System.out.println("Nota Total: " + notaTotal);
+        
+        boolean aprovacao = notaTotal >= 60;
+        if(aprovacao){
+            System.out.println("Você foi aprovado!");
+        }else{
+            System.out.println("Você foi reprovado!");
+        }
+    }
+}
