@@ -1,0 +1,60 @@
+package package_sorvete;
+
+import java.util.Scanner;
+
+public class SorveteTest {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Bem vindo a sorveteria!");
+        System.out.println("-----------------------");
+
+        String[] sabores = new String[]{"1-Abacaxi","2-Morango","3-Chocolate","4-laranja"};
+        System.out.println("Sabores: ");
+        System.out.println("\n");
+        for (int i = 0; i < sabores.length; i++) {
+            System.out.println(sabores[i]);
+        }
+        System.out.println("Selecione o sabor desejado: ");
+        String saborSelect = scanner.nextLine();
+
+        System.out.println("---------------------------");
+        String[] acompanhamentos = new String[]{"1-Biscoito","2-caramelo","3-recheio de morango","4-nenhum acompanhamento"};
+        System.out.println("Acompanhamentos");
+        for (int i = 0; i < acompanhamentos.length; i++) {
+            System.out.println(acompanhamentos[i]);
+        }
+        System.out.println("----------------------------");
+        System.out.println("Selecione o acompanhamento desejado: ");
+        int acompanhamentoDesejado = scanner.nextInt();
+        if (acompanhamentoDesejado == 1){
+            System.out.println("você escolheu biscoito");
+        }else if (acompanhamentoDesejado == 2){
+            System.out.println("Você escolheu caramelo");
+        }else if (acompanhamentoDesejado == 3){
+            System.out.println("Você escolheu recheio de morango");
+        }else if (acompanhamentoDesejado ==4){
+            System.err.println("Nenhum acompanhamento selecionado");
+        }
+
+        String[] formPagamento = new String[]{"1-Dinheiro","2-Cartão","3-Pix"};
+        System.out.println("Formas de pagamento disponiveis: ");
+        for (int i = 0; i < formPagamento.length; i++) {
+            System.out.println(formPagamento[i]);
+        }
+        System.out.println("Selecione a forma de pagamento: ");
+        int formPagSelect = scanner.nextInt();//formPagSelect = forma de pagamento escolhido(a);
+        if (formPagSelect == 1){
+            System.out.println("Forma de pagamento selecionado foi dinheiro");
+        }else if (formPagSelect == 2){
+            System.out.println("Forma de pagamento escolhida foi cartão");
+        }else if (formPagSelect == 3){
+            System.out.println("Forma de pagamento escolhida foi pix");
+        }
+
+        System.out.println("-------------------------------");
+        System.out.println("descrição da compra: ");
+        System.out.println("Sabor: " + saborSelect);
+        System.out.println("Acompanhamentos: " + acompanhamentoDesejado);
+        System.out.println("Forma de pagamento: " + formPagSelect);
+    }
+}
