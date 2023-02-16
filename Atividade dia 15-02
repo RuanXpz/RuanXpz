@@ -1,0 +1,61 @@
+package caixatexto;
+
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.util.Scanner;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.WindowConstants;
+
+public class CaixaTexto {
+
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) {
+        
+        JFrame cadastro = new JFrame("Cadastro Escolar");
+        cadastro.setBounds(750, 215, 450, 150);
+        cadastro.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        
+        FlowLayout flow = new FlowLayout();
+        Container janela = cadastro.getContentPane();
+        janela.setLayout(flow);
+        
+        janela.add(new JButton("Nome do aluno: "));
+ 
+        janela.add(new JTextField("                                                                                    "));
+        cadastro.setVisible(true);
+        
+        janela.add(new JButton("Turma do aluno: "));
+        
+        janela.add(new JTextField("                                                                                    "));
+        cadastro.setVisible(true);
+        
+        janela.add(new  JButton("Escola: "));
+       
+        janela.add(new JTextField("                                                                                    "));
+        cadastro.setVisible(true);
+        
+        janela.add(new JButton("Turno: "));
+        
+        janela.add(new JTextField("                                                                                    "));
+        cadastro.setVisible(true);
+        
+        janela.add(new JButton("Sexo: "));
+        
+        janela.add(new JRadioButton("Masculino"));
+        cadastro.setVisible(true);
+        
+        janela.add(new JRadioButton("Feminino"));
+        cadastro.setVisible(true);
+        
+        JTextArea descricao = new JTextArea(50,100);
+        JLabel descricaoAl = new JLabel();
+        descricao.setText("Histórico do aluno: ");
+        janela.add(descricao);
+    }
+}
