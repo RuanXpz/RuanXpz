@@ -1,0 +1,60 @@
+package caixatexto;
+
+import java.awt.Container;
+import java.awt.FlowLayout;
+import java.util.Scanner;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
+import javax.swing.WindowConstants;
+
+public class CaixaTexto {
+
+    @SuppressWarnings("empty-statement")
+    public static void main(String[] args) {
+        
+        JFrame cadastro = new JFrame("Cadastro Escolar");
+        cadastro.setBounds(750, 210, 450, 550);//conf. caixa
+        cadastro.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
+        
+        FlowLayout flow = new FlowLayout();
+        Container janela = cadastro.getContentPane();
+        janela.setLayout(flow);
+        
+        JTextField nomeAluno = new JTextField(57);
+        nomeAluno.setText("Nome do aluno: ");
+        janela.add(nomeAluno);
+        
+        JTextField turmaAluno = new JTextField(22);
+        turmaAluno.setText("Turma do aluno: ");
+        janela.add(turmaAluno);
+        
+        JTextField escola = new JTextField(42);
+        escola.setText("Escola: ");
+        janela.add(escola);
+        
+        JTextField turno = new JTextField(22);
+        turno.setText("Turno: ");
+        janela.add(turno);//adicionar janela do turno escolar
+        
+        janela.add(new JTextField("Sexo: "));//mensagem escrita na caixa de texto normal
+        
+        janela.add(new JRadioButton("Masculino"));
+        cadastro.setVisible(true);
+        
+        janela.add(new JRadioButton("Feminino"));
+        cadastro.setVisible(true);
+        
+        JTextArea descricao = new JTextArea(50,76);//mensagem escrita na caixa de texto em area
+        descricao.setText("Histórico do aluno: ");
+        janela.add(descricao);
+        
+        JTextArea desc = new JTextArea(50,76);//desc --> descricao
+        desc.setText("Motivo pelo qual o aluno entrou na escola: ");
+        janela.add(desc);
+    }
+}
